@@ -24,7 +24,6 @@ class Renobe_chapters_List(generics.ListAPIView):
         return Renobe_chapters.objects.filter(renobe__slug=x)
 
 class Renobe_chapters_API(generics.ListAPIView):
-    permission_classes = (IsAuthenticated,)
     queryset = Renobe_chapters.objects.all()
     serializer_class =  Renobe_chapters_serializers
 
